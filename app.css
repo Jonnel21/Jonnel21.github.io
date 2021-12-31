@@ -47,6 +47,12 @@ body {
     .sidenav a {font-size: 18px;}
   }
 
+/* On smaller screens, where width is less than 600px, hide the sidebar */
+@media screen and (max-width: 600px) {
+    .sidenav {width:0; margin-left:0;}
+    .main {margin-left:0;}
+  }
+
 /* Banner styling */
 .banner {
     position: relative;
@@ -68,7 +74,7 @@ body {
     font-size: 3rem;
 }
 
-/* On smaller screens, where width is less than 800px, change the style of the sidebar (less padding and a smaller font size) */
+/* On smaller screens, where width is less than 800px, change the font size of the banner */
 @media only screen and (max-width: 800px) {
     .banner-content {
       font-size: 1rem;
