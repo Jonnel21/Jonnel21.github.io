@@ -65,5 +65,11 @@ body {
     font-family: "gats";
     color: white;
     font-size: 3rem;
-    min-width: 300;
 }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media only screen and (max-width: 800px) {
+    .banner-content {
+      font-size: 1rem;
+    }
+  }
