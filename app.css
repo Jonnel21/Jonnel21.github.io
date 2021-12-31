@@ -54,6 +54,7 @@ body {
 
 .banner img {
     width: 100%;
+    max-width: 800;
 }
 
 .banner-content {
@@ -63,13 +64,52 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     font-family: "gats";
-    color: white;
+    color: gray;
     font-size: 3rem;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+/* On smaller screens, where width is less than 800px, change the style of the sidebar (less padding and a smaller font size) */
 @media only screen and (max-width: 800px) {
     .banner-content {
       font-size: 1rem;
     }
   }
+
+/* Story styling */
+.story {
+    text-align: center;
+    background-color: white;
+}
+
+.story-header {
+
+}
+
+.story-paragraph {
+
+}
+
+/* Date & Location styling */
+.date {
+    background-color: white;
+}
+
+.location {
+    background-color: white;
+}
+
+/* Ceremony & Reception styling */
+.flex {
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+}
+
+.flex-column img {
+    width: 70%;
+    border-radius: 50%;
+}
+
+.flex-column p {
+    text-align: center;
+}
