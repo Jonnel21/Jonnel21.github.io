@@ -12,18 +12,32 @@ body {
     margin-left: 170px;
 }
 
+/* Toggle checkbox on checked */
+#toggle-input {
+    position: fixed;
+    z-index: 2;
+}
+
+#toggle-input:checked ~ .main {
+    margin-left: 0;
+}
+
+#toggle-input:checked ~ .sidenav {
+    display: none;
+    margin-left: 0;
+}
+
 /* Side navigation styling */
 .sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
     width: 170px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    top: 10; /* Stay at the top */
     left: 0;
-    background-color: pink; /* White */
+    background-color: pink;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
-  }
+}
   
 .sidenav a {
     padding: 6px 0px 6px 0px;
@@ -118,4 +132,10 @@ body {
 
 .flex-column p {
     text-align: center;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
 }
