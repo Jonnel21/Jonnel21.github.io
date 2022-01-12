@@ -13,7 +13,7 @@
 
     <!-- Side navigation -->
     <div id="sidenavContainer" class="sidenav">
-        <img id="sidenavIcon" onclick="toggleSidenNav()" src="./assets/icons/bars-solid.svg"/>
+        <img id="sidenavIcon" onclick="toggleSideNav()" src="./assets/icons/bars-solid.svg"/>
         <nav id="sidenav" style="display:none;">
             <a href="#home">Home</a>
             <a href="#story">The Story</a>
@@ -146,25 +146,32 @@
 
     <script>
         var mini = true;
+        var sidenav = document.getElementById("sidenav");
+        var sidenavIcon = document.getElementById("sidenavIcon");
+        var mainContainer = document.getElementById("mainContainer");
 
-        function toggleSidenNav() {
-            var sidenav = document.getElementById("sidenav");
-            var sidenavIcon = document.getElementById("sidenavIcon");
-            var mainContainer = document.getElementById("mainContainer");
+        window.onresize = function () {
+            closeSideNav();
+        }        
 
+        function toggleSideNav() {
             if (mini) {
                 mainContainer.style.marginLeft = "150px";
                 sidenav.style.display = "block";
                 sidenavIcon.src = "./assets/icons/times-circle-regular.svg";
                 this.mini = false;
             } else {
-                mainContainer.style.marginLeft = "0px";
-                sidenav.style.display = "none";
-                sidenavIcon.src = "./assets/icons/bars-solid.svg";
-                this.mini = true;
+                closeSideNav()
             }
         }
-    </script>
+
+        function closeSideNav() {
+            mainContainer.style.marginLeft = "0px";
+            sidenav.style.display = "none";
+            sidenavIcon.src = "./assets/icons/bars-solid.svg";
+            this.mini = true;
+        }
+     </script>
 
 </body>
 
