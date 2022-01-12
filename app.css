@@ -63,6 +63,12 @@ body {
     margin-left: 0px;
 }
 
+.content {
+    margin:  1em;
+    border-radius: 1em;
+    border-style:  ridge;
+}
+
 /* Side navigation styling */
 .sidenav {
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
@@ -152,6 +158,7 @@ body {
 
 /* Date & Location styling */
 .date {
+    @extend .content;
     background-color: white;
     text-align: center;
 }
@@ -178,6 +185,7 @@ body {
 }
 
 .rsvp {
+    margin:  1em;
     text-align: center;
 }
 
@@ -199,6 +207,7 @@ body {
 .registry {
     background-color: white;
     text-align: center;
+    padding-bottom: 15px;
 }
 
 .registry a > img{
@@ -220,9 +229,11 @@ body {
 }
 
 .gallery-content {
+    text-align: center;
+    margin-bottom: 15px;
 }
 
-.gallery img {
+.gallery-content img {
     width: 300px;
     height: 300px;
     object-fit: cover;
@@ -234,6 +245,12 @@ body {
 .faqs {
     background-color: white;
     text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.faqs h1 {
+    text-align: center;
 }
 
 /* Button styling */
