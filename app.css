@@ -60,39 +60,26 @@ body {
 }
 
 .main {
-    margin-left: 170px;
-}
-
-/* Toggle checkbox on checked */
-#toggle-input {
-    position: fixed;
-    z-index: 2;
-}
-
-#toggle-input:checked ~ .main {
-    margin-left: 0;
-}
-
-#toggle-input:checked ~ .sidenav {
-    display: none;
-    margin-left: 0;
+    margin-left: 0px;
 }
 
 /* Side navigation styling */
 .sidenav {
-    width: 170px; /* Set the width of the sidebar */
-    height: 100%;
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
-    top: 10; /* Stay at the top */
     left: 0;
     background-color: pink;
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
+}
+
+#sidenavIcon {
+    width: 30px;
+    height:  30px;
+    margin:  10px 10px 3px 10px;
 }
   
 .sidenav a {
-    padding: 6px 0px 6px 0px;
+    padding: 6px 10px 6px 10px;
     text-decoration: none;
     font-size: 17px;
     color: black;

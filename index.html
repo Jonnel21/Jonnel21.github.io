@@ -10,25 +10,24 @@
 </head>
 
 <body>
-    <!-- Toggle checkbox -->
-    <input type="checkbox" name="Hide" id="toggle-input">
 
     <!-- Side navigation -->
-    <nav class="sidenav">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">The Story</a></li>
-            <li><a href="#">When & Where</a></li>
-            <li><a href="#">RSVP</a></li>
-            <li><a href="#">Registry</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">FAQ</a></li>
-        </ul>
-    </nav>
+    <div id="sidenavContainer" class="sidenav">
+        <img id="sidenavIcon" onclick="toggleSidenNav()" src="./assets/icons/bars-solid.svg"/>
+        <nav id="sidenav" style="display:none;">
+            <a href="#home">Home</a>
+            <a href="#story">The Story</a>
+            <a href="#whenwhere">When & Where</a>
+            <a href="#rvsp">RSVP</a>
+            <a href="#registry">Registry</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </div>
 
-    <div class="main">
+    <div id="mainContainer" class="main">
         <!-- Banner -->
-        <div class="banner">
+        <div id="home" class="banner">
             <img src="./assets/images/c+j-12.jpg" alt="cute couple">
             <div class="banner-content">
                 <h1>Jonnel & Cindy</h1>
@@ -37,7 +36,7 @@
         </div>
 
         <!-- Our Story -->
-        <div class="story">
+        <div id="story" class="story">
             <div class="story-header">
                 <p>We met in college...</p>
             </div>
@@ -60,7 +59,7 @@
         </div>
 
         <!-- Ceremony/Reception Information -->
-        <div class="flex">
+        <div id="whenwhere" class="flex">
             <div class="flex-column">
                 <p><img src="./assets/images/ring_3000_3000.jpg" alt="cute ring"></p>
                 <p>Ceremony</p>
@@ -81,7 +80,7 @@
         </div>
 
         <!-- RSVP / Map -->
-        <div class="rsvp">
+        <div id="rvsp" class="rsvp">
             <a href="https://tinyurl.com/2p898txp" target="_blank" rel="noreferrer noopener"><button>Map</button></a>
             <a href="https://forms.gle/YfNitEjhZxWZ8KgN6" target="_blank" rel="noreferrer noopener"><button>RSVP</button></a>
         </div>
@@ -94,14 +93,14 @@
         </div>
 
         <!-- Registry -->
-        <div class="registry">
+        <div id="registry" class="registry">
             <h1>Things we would like to have...</h1>
             <a href="https://www.amazon.com/wedding/organize-registry?ref_=wedding_subnav" target="_blank" rel="noreferrer noopener">
                 <img src="./assets/images/2560px-Amazon_logo.svg.png" alt="amazon logo">
             </a>
         </div>
         
-        <h1 class="gallery-header">Gallery</h1>
+        <h1 id="gallery" class="gallery-header">Gallery</h1>
         <!-- Gallery -->
         <div class="gallery">
            
@@ -116,7 +115,7 @@
         </div>
 
         <!-- FAQS -->
-        <div class="faqs">
+        <div id="faq" class="faqs">
             <h1>FAQS</h1>
             <ol>
                 <li>Can I bring a guest?</li>
@@ -144,6 +143,28 @@
             </ol>
         </div>
     </div>
+
+    <script>
+        var mini = true;
+
+        function toggleSidenNav() {
+            var sidenav = document.getElementById("sidenav");
+            var sidenavIcon = document.getElementById("sidenavIcon");
+            var mainContainer = document.getElementById("mainContainer");
+
+            if (mini) {
+                mainContainer.style.marginLeft = "150px";
+                sidenav.style.display = "block";
+                sidenavIcon.src = "./assets/icons/times-circle-regular.svg";
+                this.mini = false;
+            } else {
+                mainContainer.style.marginLeft = "0px";
+                sidenav.style.display = "none";
+                sidenavIcon.src = "./assets/icons/bars-solid.svg";
+                this.mini = true;
+            }
+        }
+    </script>
 
 </body>
 
