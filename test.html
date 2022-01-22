@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Sacramento&family=Satisfy&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Side navigation -->
+    <div id="sidenavContainer" class="sidenav">
+        <img id="sidenavIcon" onclick="toggleSideNav()" src="./assets/icons/bars-solid.svg" />
+        <nav id="sidenav" style="display:none;">
+            <a href="#home">Home</a>
+            <a href="#story">The Story</a>
+            <a href="#whenwhere">When & Where</a>
+            <a href="#rvsp">RSVP</a>
+            <a href="#registry">Registry</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </div>
+
+    <div class="gallery-container">
+        <img src="./assets/images/c+j-4.jpg" alt="cute couple">
+        <div class="gallery-content">
+            <p>Jonnel & Cindy</p>
+            <p>10.02.22</p>
+        </div>
+    </div>
+
+    <div class="space">
+        <div class="story-content">
+            <h1>We met in college...</h1>
+            <p>
+                We met our freshman year in San Jose State 9 years ago.<br>
+                With our opposite personalities and similar interests, we naturally became best friends.<br>
+                After overcoming difficulties, we started our adventure.<br>
+                Fast forward to the present day, we are leveling up our love story.<br>
+                We cannot wait to share our happiness with everyone.<br>
+                #LetJOHeartBeYORGuidingKey
+            </p>
+        </div>
+    </div>
+
+    <div class="gallery-container">
+        <img src="./assets/images/c+j-4.jpg" alt="cute couple">
+        <div class="gallery-content">Best Friends</div>
+    </div>
+
+    <!-- Date -->
+    <div class="date">
+        <p>Sunday, October 2nd, 2022</p>
+    </div>
+
+    <!-- Ceremony/Reception Information -->
+    <div id="whenwhere" class="flex">
+        <div class="flex-column">
+            <p><img src="./assets/images/ring_3000_3000.jpg" alt="cute ring"></p>
+            <p>Ceremony</p>
+            <p>3:00 PM - 4:00 PM</p>
+        </div>
+        <div class="flex-column">
+            <p><img src="./assets/images/shesaidyes_3000_3000.jpg" alt="cute couple"></p>
+            <p>Reception</p>
+            <p>5:30 PM - 9:00 PM</p>
+        </div>
+    </div>
+
+    <!-- Location / RSVP / Map -->
+    <div class="location">
+        <p>The Ranch at Silver Creek</p>
+        <p>4601 Hill Top View Ln.</p>
+        <p>San Jose, CA 95138</p>
+        <div id="map" class="map">
+            <a href="https://tinyurl.com/2p898txp" target="_blank" rel="noreferrer noopener"><button
+                    class="css-button-fully-rounded--red">Map</button></a>
+            <a href="https://forms.gle/YfNitEjhZxWZ8KgN6" target="_blank" rel="noreferrer noopener"><button
+                    class="css-button-fully-rounded--red">RSVP</button></a>
+        </div>
+    </div>
+
+    <div class="gallery-container">
+        <img src="./assets/images/c+j-4.jpg" alt="cute couple">
+        <div class="gallery-content">He asked...</div>
+    </div>
+
+    <div class="space">
+        <div class="story-content">
+            <h1>Gifts</h1>
+            <p>
+                While we appreciate you attendting the wedding.<br>
+                If you feel the need to give us stuff, we prefer<br>
+                to have paper gifts.<br>
+                Please click below to access our registry on amazon. Venmo: add handle<br>
+            </p>
+            <img class="amazon" src="./assets/images/2560px-Amazon_logo.svg.png" alt="amazon link">
+        </div>
+    </div>
+
+    <div class="gallery-container">
+        <img src="./assets/images/c+j-4.jpg" alt="cute couple">
+        <div class="gallery-content">She said finally!</div>
+    </div>
+
+    <div class="space">
+        <div class="story-content">
+            <h1>FAQS</h1>
+            <p>
+                While we appreciate you attendting the wedding.<br>
+                If you feel the need to give us stuff, we prefer<br>
+                to have paper gifts.<br>
+                Please click below to access our registry on amazon.<br>
+            </p>
+        </div>
+    </div>
+</body>
+
+<script>
+    var images = document.querySelectorAll("div.gallery-container > img");
+    new simpleParallax(images, {
+        scale: 1.6,
+        orientation: 'down'
+    });
+
+    var mini = true;
+    var sidenav = document.getElementById("sidenav");
+    var sidenavIcon = document.getElementById("sidenavIcon");
+
+    window.onresize = function () {
+        // closeSideNav();
+    }
+
+    function toggleSideNav() {
+        if (mini) {
+            sidenav.style.display = "block";
+            sidenavIcon.src = "./assets/icons/times-circle-regular.svg";
+            document.styleSheets[0].rules[2].style.setProperty("background", "rgba(209, 189, 189, 0.7)");
+            this.mini = false;
+        } else {
+            closeSideNav()
+        }
+    }
+
+    function closeSideNav() {
+        sidenav.style.display = "none";
+        document.styleSheets[0].rules[2].style.removeProperty("background");
+        sidenavIcon.src = "./assets/icons/bars-solid.svg";
+        this.mini = true;
+    }
+</script>
+
+</html>
