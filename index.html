@@ -31,14 +31,14 @@
 
     <div id="home" class="gallery-container">
         <img src="./assets/images/c+j-4.jpg" alt="cute couple">
-        <div class="gallery-content">
+        <div class="gallery-content center">
             <p>Jonnel & Cindy</p>
             <p>10.02.22</p>
         </div>
     </div>
 
-    <div id="story" class="space">
-        <div class="story-content">
+    <div class="space">
+        <div class="story-content center">
             <h1>We met in college...</h1>
             <p>
                 We met our freshman year in San Jose State 9 years ago.<br>
@@ -53,7 +53,7 @@
 
     <div class="gallery-container">
         <img src="./assets/images/c+j-4.jpg" alt="cute couple">
-        <div class="gallery-content">Best Friends</div>
+        <div class="gallery-content center">Best Friends</div>
     </div>
 
     <!-- Date -->
@@ -94,7 +94,7 @@
     </div>
 
     <div id="registry" class="space">
-        <div class="story-content">
+        <div class="story-content center">
             <h1>Gifts</h1>
             <p>
                 While we appreciate you attendting the wedding.<br>
@@ -113,11 +113,11 @@
 
     <div class="gallery-container">
         <img src="./assets/images/c+j-4.jpg" alt="cute couple">
-        <div class="gallery-content">She said finally!</div>
+        <div class="gallery-content center">She said finally!</div>
     </div>
 
     <div id="faq" class="space">
-        <div class="story-content">
+        <div class="story-content center">
             <h1>FAQS</h1>
             <p>
                 While we appreciate you attendting the wedding.<br>
@@ -151,9 +151,10 @@
 
     function toggleSideNav() {
         if (mini) {
+            console.log("Opening")
             sidenav.style.display = "block";
+            sidenav.style.background = "rgba(209, 189, 189, 0.7)"
             sidenavIcon.src = "./assets/icons/times-circle-regular.svg";
-            document.styleSheets[0].rules[2].style.setProperty("background", "rgba(209, 189, 189, 0.7)");
             this.mini = false;
         } else {
             closeSideNav()
@@ -161,8 +162,9 @@
     }
 
     function closeSideNav() {
+        console.log("Closing")
         sidenav.style.display = "none";
-        document.styleSheets[0].rules[2].style.removeProperty("background");
+        sidenav.style.background = "rgba(209, 189, 189, 0.7)"
         sidenavIcon.src = "./assets/icons/bars-solid.svg";
         this.mini = true;
     }
