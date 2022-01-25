@@ -209,3 +209,13 @@ html {
     font-family: sans-serif;
     font-size: 3.5rem;
 }
+
+/* Amazon Registry Gift Items */
+.gift-container {
+    display: flex;
+    width: 100%;
+}
+
+.gift-item {
+    height: 200px;
+}
