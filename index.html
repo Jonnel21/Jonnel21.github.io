@@ -29,16 +29,21 @@
         </nav>
     </div>
 
+    <div id="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-image">
+    </div>
+
     <div id="home" class="gallery-container">
         <img src="./assets/images/c+j-4.jpg" alt="cute couple">
-        <div class="gallery-content">
+        <div class="gallery-content center">
             <p>Jonnel & Cindy</p>
             <p>10.02.22</p>
         </div>
     </div>
 
     <div id="story" class="space">
-        <div class="story-content">
+        <div class="story-content center">
             <h1>We met in college...</h1>
             <p>
                 We met our freshman year in San Jose State 9 years ago.<br>
@@ -53,7 +58,7 @@
 
     <div class="gallery-container">
         <img src="./assets/images/c+j-4.jpg" alt="cute couple">
-        <div class="gallery-content">Best Friends</div>
+        <div class="gallery-content center">Best Friends</div>
     </div>
 
     <!-- Date -->
@@ -76,7 +81,7 @@
     </div>
 
     <!-- Location / RSVP / Map -->
-    <div class="location">
+    <div id="map" class="location">
         <p>The Ranch at Silver Creek</p>
         <p>4601 Hill Top View Ln.</p>
         <p>San Jose, CA 95138</p>
@@ -90,11 +95,11 @@
 
     <div class="gallery-container">
         <img src="./assets/images/c+j-4.jpg" alt="cute couple">
-        <div class="gallery-content">He asked...</div>
+        <div class="gallery-content center">He asked...</div>
     </div>
 
     <div id="registry" class="space">
-        <div class="story-content">
+        <div class="story-content center">
             <h1>Gifts</h1>
             <p>
                 While we appreciate you attendting the wedding.<br>
@@ -113,11 +118,26 @@
 
     <div class="gallery-container">
         <img src="./assets/images/c+j-4.jpg" alt="cute couple">
-        <div class="gallery-content">She said finally!</div>
+        <div class="gallery-content center">She said finally!</div>
     </div>
 
+
+    <div id="gallery" class="gallery-container">
+        <h1>Gallery</h1>
+        <div class="picture-container">
+            <section id="masonry" />
+        </div>
+    </div>
+
+    <!-- TODO -->
+    <div class="gallery-container">
+        <img src="./assets/images/c+j-4.jpg" alt="cute couple">
+        <div class="gallery-content center">Add Something</div>
+    </div>
+
+    <!-- TODO -->
     <div id="faq" class="space">
-        <div class="story-content">
+        <div class="story-content center">
             <h1>FAQS</h1>
             <p>
                 While we appreciate you attendting the wedding.<br>
@@ -141,7 +161,9 @@
         easing: 'easeOutCubic'    
     });
 
+    // Sidenav
     var mini = true;
+    var sidenavContainer = document.getElementById("sidenavContainer");
     var sidenav = document.getElementById("sidenav");
     var sidenavIcon = document.getElementById("sidenavIcon");
 
@@ -151,9 +173,9 @@
 
     function toggleSideNav() {
         if (mini) {
+            sidenavContainer.style.background = "rgba(209, 189, 189, 0.7)"
             sidenav.style.display = "block";
             sidenavIcon.src = "./assets/icons/times-circle-regular.svg";
-            document.styleSheets[0].rules[2].style.setProperty("background", "rgba(209, 189, 189, 0.7)");
             this.mini = false;
         } else {
             closeSideNav()
@@ -161,11 +183,177 @@
     }
 
     function closeSideNav() {
+        sidenavContainer.style.background = ""
         sidenav.style.display = "none";
-        document.styleSheets[0].rules[2].style.removeProperty("background");
         sidenavIcon.src = "./assets/icons/bars-solid.svg";
         this.mini = true;
     }
+
+    // Modal
+    var modal = document.getElementById("modal")
+    var modalImage = document.getElementById("modal-image")
+
+    function openModal(srcAsset) {
+        modal.style.display = "block";
+        modalImage.src = srcAsset;
+        console.log(modalImage);
+    }
+
+    function closeModal() {
+        modal.style.display = "none";
+    }
+
+    // Masonry Gallery
+    let maxGridX = 20;
+    let maxGridY = 5;
+
+    class Pic {
+        constructor() {
+            this.startX = 0;
+            this.startY = 0;
+            this.width = Math.max(1, Math.round(Math.random() * 3)) ;
+            this.height = Math.max(1, Math.round(Math.random() * 3)) ;
+        }
+
+        getElement() {
+            var figure = document.createElement("figure");
+            figure.classList.add("cell")
+
+            var srcAsset = "./assets/images/c+j-12.jpg";
+            var image = document.createElement("img")
+            image.src = srcAsset;
+
+            figure.append(image)
+            figure.style.gridColumn = `${this.startX+1} / span ${this.width}`
+            figure.style.gridRow = `${this.startY+1} / span ${this.height}`
+            figure.onclick = function() {
+                openModal(srcAsset);
+            }
+            return figure;
+        }
+    }
+
+    function loadPictureGallery() {
+        var masonry = document.getElementById("masonry");
+        
+        let grid = initializeGrid();
+        let pics = [];
+        for (let temp = 0; temp < 20; temp++) {
+            pics.push(new Pic());
+        }
+
+        pics.forEach((pic) => {
+            pic.startX = getStartX(grid);
+            pic.startY = getStartY(grid);
+            pic.width = getMaxWidth(grid, pic);
+            pic.height = getMaxHeight(grid, pic);
+          
+            floodGrid(grid, pic);
+            masonry.append(pic.getElement())
+        })
+    }
+
+    function getStartX(grid) {
+        for (let tempX = 0; tempX < maxGridX; tempX++) {
+            for (let tempY = 0; tempY < maxGridY; tempY++) {
+                if (grid[tempY][tempX] == 0) {
+                    return tempX;
+                }
+            } 
+        }
+        return maxGridX-1;
+    }
+
+    function getStartY(grid) {
+        for (let tempX = 0; tempX < maxGridX; tempX++) {
+            for (let tempY = 0; tempY < maxGridY; tempY++) {
+                if (grid[tempY][tempX] == 0) {
+                    return tempY;
+                }
+            } 
+        }
+        return maxGridY-1;
+    }
+
+    function getMaxWidth(grid, gro) {
+        let width = gro.startX + gro.width > maxGridX ? 1 : gro.width;
+        let widths = [];
+        for (let tempY = 0; tempY < gro.height; tempY++) {
+            let posY = gro.startY+tempY;
+            if (posY >= maxGridY) {
+                posY = maxGridY-1;
+                tempY = maxGridY;
+            }
+
+            for (let tempX = 1; tempX < width; tempX++) { 
+                if (gro.startX+tempX >= maxGridX) {
+                    widths.push(tempX);
+                    tempX = maxGridX;
+                } else if (grid[posY][gro.startX+tempX] != 0) {
+                    widths.push(tempX);
+                }
+            } 
+        }
+
+        if (widths.length != 0) {
+           let temp = Math.min(...widths);
+            width = Math.min(width, temp);
+        }
+
+        return width;
+    }
+
+    function getMaxHeight(grid, gro) {
+        let height =  gro.startY + gro.height > maxGridY ? 1 : gro.height;
+
+        let heights = [];
+        for (let tempX = 0; tempX < gro.width; tempX++) {
+            let posX = gro.startX+tempX;
+            if (posX >= maxGridX) {
+                posX = maxGridX-1;
+                tempX = maxGridX;
+            }
+
+            for (let tempY = 1; tempY < height; tempY++) {
+                if (gro.startY+tempY >= maxGridY) {
+                    heights.push(tempY);
+                    tempY = maxGridY;      
+                } else if (grid[gro.startY+tempY][posX] != 0) {
+                    heights.push(tempY);
+                }
+            } 
+        }
+
+        if (heights.length != 0) {
+            let temp = Math.min(...heights);
+            height = Math.min(height, temp);
+        }
+
+        return height;
+    }
+
+    function floodGrid(grid, gro) {
+        for(let tempX = 0; tempX < gro.width; tempX++) {
+            for(let tempY = 0; tempY < gro.height; tempY++) {
+                grid[gro.startY + tempY][gro.startX + tempX] = gro.index;
+            }
+        }
+    }
+
+    function initializeGrid() {
+        let grid = [];
+        for (let tempY = 0; tempY < maxGridY; tempY++ ) {
+            let row = []
+          for (let tempX = 0; tempX < maxGridX; tempX++ ) {
+                row.push(0);
+          }
+            grid.push(row);
+        }
+        return grid;
+    }
+
+    loadPictureGallery();
+    closeModal();
 </script>
 
 </html>
