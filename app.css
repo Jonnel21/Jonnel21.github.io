@@ -51,7 +51,7 @@ html {
 }
 
 #story {
-    background-image: url("/assets/images/corner-flower.png"), url("/assets/images/corner-flower-flip.png");
+    background-image: url("/assets/images/florals/corner-flower.png"), url("/assets/images/florals/corner-flower-flip.png");
     background-position: bottom left, top right;
     background-size: 35%, 35%;
     background-repeat:  no-repeat;
@@ -177,7 +177,7 @@ html {
 }
 
 /* #story {
-    background-image: url("/assets/images/column-flower.png");
+    background-image: url("/assets/images/florals/column-flower.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -209,14 +209,14 @@ html {
     align-items: center;
     justify-content: center;
     column-gap: 0%;
-    background-image: url("./assets/images/bottom.png");
+    background-image: url("./assets/images/florals/bottom.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .flex-column img {
-    width: 60%;
+    width: 50%;
     border-radius: 50%;
     margin: auto;
 }
@@ -281,10 +281,11 @@ html {
 }
 
 .faqs-container {
-    background-image: url("/assets/images/pngegg-2.png");
+    background-image: url("/assets/images/florals/pngegg-2.png");
     background-repeat: repeat-x;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.023);
+    padding-bottom: 3%;
 }
 
 .faqs-container h1 {
@@ -404,7 +405,7 @@ html {
 }
 
 .wrapper>* {
-    padding: 30px;
+    padding-bottom: 30px;
     flex: 1 100%;
 }
 
@@ -413,7 +414,7 @@ html {
     flex-flow: row wrap;
     font-weight: bold;
     text-align: center;
-    background-image: url("/assets/images/bottom.png");
+    background-image: url("/assets/images/florals/bottom.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
