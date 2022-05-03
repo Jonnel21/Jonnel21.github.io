@@ -7,13 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
-    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
-    <script
-        src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Sacramento&family=Satisfy&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Sacramento&family=Satisfy&family=Sulphur+Point&display=swap"
         rel="stylesheet">
 </head>
 
@@ -24,7 +23,7 @@
         <img id="sidenavIcon" onclick="toggleSideNav()" src="./assets/icons/bars-solid.svg" />
         <nav id="sidenav" style="display:none;">
             <a data-scroll href="#home">Home</a>
-            <a data-scroll href="#story">The Story</a>
+            <a data-scroll href="#story">Our Story</a>
             <a data-scroll href="#whenwhere">When & Where</a>
             <a data-scroll href="#map">RSVP</a>
             <a data-scroll href="#registry">Registry</a>
@@ -32,25 +31,46 @@
             <a data-scroll href="#faq">FAQ</a>
         </nav>
     </div>
-
     <div id="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img id="modal-image">
     </div>
 
     <div id="home" class="gallery-container">
-        <img src="./assets/images/banner/CindyJonnel-InezJPhoto-496.jpg" alt="cute couple">
+        <img srcset = "https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-256,h-171/home_banner_3200w_6mwAXOfpX?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 256w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-311,h-207/home_banner_3200w_6mwAXOfpX?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 311w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-362,h-241/home_banner_3200w_6mwAXOfpX?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 362w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-704,h-469/home_banner_3200w_6mwAXOfpX?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 704w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-960,h-640/home_banner_3200w_6mwAXOfpX?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 960w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-1376,h-917/home_banner_3200w_6mwAXOfpX?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 1376w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-2496,h-1664/home_banner_3200w_6mwAXOfpX?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 2496w" sizes="(max-width: 320px) 256px,
+        (max-width: 375px) 311px,
+        (max-width: 425px) 362px,
+        (max-width: 768px) 704px,
+        (max-width: 1024px) 960px,
+        (max-width: 1440px) 1376px,
+        (max-width: 2560px) 2496px
+       2400px" src="https://ik.imagekit.io/i1zomewktwg/home_banner_3200w_6mwAXOfpX?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327" alt="cute couple">
         <div class="gallery-content center">
             <p>Jonnel & Cindy</p>
             <p>10.02.22</p>
         </div>
     </div>
 
+    <!-- <div id="home" class="gallery-container">
+        <img srcset = "https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-256,h-171/CindyJonnel-InezJPhoto-496_zWsVbCTV7f.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 256w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-311,h-207/CindyJonnel-InezJPhoto-496_zWsVbCTV7f.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 311w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-362,h-241/CindyJonnel-InezJPhoto-496_zWsVbCTV7f.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 362w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-704,h-469/CindyJonnel-InezJPhoto-496_zWsVbCTV7f.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 704w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-960,h-640/CindyJonnel-InezJPhoto-496_zWsVbCTV7f.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 960w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-1376,h-917/CindyJonnel-InezJPhoto-496_zWsVbCTV7f.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 1376w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-2496,h-1664/CindyJonnel-InezJPhoto-496_zWsVbCTV7f.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 2496w" sizes="(max-width: 320px) 256px,
+        (max-width: 375px) 311px,
+        (max-width: 425px) 362px,
+        (max-width: 768px) 704px,
+        (max-width: 1024px) 960px,
+        (max-width: 1440px) 1376px,
+        (max-width: 2560px) 2496px
+       2400px" src="https://ik.imagekit.io/i1zomewktwg/CindyJonnel-InezJPhoto-496_zWsVbCTV7f.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327" alt="cute couple">
+        <div class="gallery-content center">
+            <p>Jonnel & Cindy</p>
+            <p>10.02.22</p>
+        </div>
+    </div> -->
+
     <div id="story" class="flower-border-space">
         <!-- <div class="flower-border-1 center">
             <img src="./assets/images/blue_pink_curve-1.jpg">
         </div> -->
-        <div class="story-content center">
+        <div class="story-content">
             <h1>We met in college...</h1>
             <p>
                 We met our freshman year in San Jose State 9 years ago.<br>
@@ -64,7 +84,14 @@
     </div>
 
     <div class="gallery-container">
-        <img src="./assets/images/banner/CindyJonnel-InezJPhoto-421.jpg" alt="cute couple">
+        <img srcset="https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-256,h-171/CindyJonnel-InezJPhoto-421__1sit_d8Y.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 256w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-311,h-207/CindyJonnel-InezJPhoto-421__1sit_d8Y.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 311w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-362,h-241/CindyJonnel-InezJPhoto-421__1sit_d8Y.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 362w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-704,h-469/CindyJonnel-InezJPhoto-421__1sit_d8Y.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 704w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-960,h-640/CindyJonnel-InezJPhoto-421__1sit_d8Y.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 960w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-1376,h-917/CindyJonnel-InezJPhoto-421__1sit_d8Y.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 1376w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-2496,h-1664/CindyJonnel-InezJPhoto-421__1sit_d8Y.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 2496w" sizes="(max-width: 320px) 256px,
+        (max-width: 375px) 311px,
+        (max-width: 425px) 362px,
+        (max-width: 768px) 704px,
+        (max-width: 1024px) 960px,
+        (max-width: 1440px) 1376px,
+        (max-width: 2560px) 2496px
+       2400px" src="https://ik.imagekit.io/i1zomewktwg/CindyJonnel-InezJPhoto-421__1sit_d8Y.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306326011" alt="cute couple">
         <div class="gallery-content center">Best Friends</div>
     </div>
 
@@ -74,16 +101,30 @@
         <header class="header">Sunday, October 2nd, 2022</header>
         <aside class="aside">
             <div class="flex-column">
-                <p><img src="./assets/images/banner/CindyJonnel-InezJPhoto-206.jpg" alt="cute ring"></p>
+                <p><img srcset="https://ik.imagekit.io/i1zomewktwg/tr:w-128,h-192/CindyJonnel-InezJPhoto-206_fn2BM6VGP.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327274 128w, https://ik.imagekit.io/i1zomewktwg/tr:w-156,h-233/CindyJonnel-InezJPhoto-206_fn2BM6VGP.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327274 156w,https://ik.imagekit.io/i1zomewktwg/tr:w-181,h-271/CindyJonnel-InezJPhoto-206_fn2BM6VGP.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327274 181w,https://ik.imagekit.io/i1zomewktwg/tr:w-352,h-528/CindyJonnel-InezJPhoto-206_fn2BM6VGP.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327274 352w,https://ik.imagekit.io/i1zomewktwg/tr:w-240,h-360/CindyJonnel-InezJPhoto-206_fn2BM6VGP.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327274 240w,https://ik.imagekit.io/i1zomewktwg/tr:w-344,h-516/CindyJonnel-InezJPhoto-206_fn2BM6VGP.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327274 344w,https://ik.imagekit.io/i1zomewktwg/tr:w-624,h-936/CindyJonnel-InezJPhoto-206_fn2BM6VGP.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327274 624w" sizes="(max-width: 320px) 128px,
+                    (max-width: 375px) 156px,
+                    (max-width: 425px) 181px,
+                    (max-width: 768px) 352px,
+                    (max-width: 1024px) 240px,
+                    (max-width: 1440px) 344px,
+                    (max-width: 2560px) 624px
+                   240px" src="https://ik.imagekit.io/i1zomewktwg/CindyJonnel-InezJPhoto-206_fn2BM6VGP.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327274" alt="cute ring"></p>
                 <p>Ceremony</p>
-                <p>3:00 PM - 4:00 PM</p>
+                <p>3.00 PM - 4.00 PM</p>
             </div>
         </aside>
         <aside class="aside">
             <div class="flex-column">
-                <p><img src="./assets/images/banner/CindyJonnel-InezJPhoto-158-center.jpg" alt="cute couple"></p>
+                <p><img srcset="https://ik.imagekit.io/i1zomewktwg/tr:w-128,h-192/CindyJonnel-InezJPhoto-158-center_sugoC8hT2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327274 128w, https://ik.imagekit.io/i1zomewktwg/tr:w-156,h-233/CindyJonnel-InezJPhoto-158-center_sugoC8hT2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327274 156w,https://ik.imagekit.io/i1zomewktwg/tr:w-181,h-271/CindyJonnel-InezJPhoto-158-center_sugoC8hT2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327274 181w,https://ik.imagekit.io/i1zomewktwg/tr:w-352,h-528/CindyJonnel-InezJPhoto-158-center_sugoC8hT2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327274 352w,https://ik.imagekit.io/i1zomewktwg/tr:w-240,h-360/CindyJonnel-InezJPhoto-158-center_sugoC8hT2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327274 240w,https://ik.imagekit.io/i1zomewktwg/tr:w-344,h-516/CindyJonnel-InezJPhoto-158-center_sugoC8hT2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327274 344w,https://ik.imagekit.io/i1zomewktwg/tr:w-624,h-936/CindyJonnel-InezJPhoto-158-center_sugoC8hT2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327274 624w" sizes="(max-width: 320px) 128px,
+                    (max-width: 375px) 156px,
+                    (max-width: 425px) 181px,
+                    (max-width: 768px) 352px,
+                    (max-width: 1024px) 240px,
+                    (max-width: 1440px) 344px,
+                    (max-width: 2560px) 624px
+                   240px" src="https://ik.imagekit.io/i1zomewktwg/CindyJonnel-InezJPhoto-158-center_sugoC8hT2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306321367" alt="cute couple"></p>
                 <p>Reception</p>
-                <p>5:30 PM - 9:00 PM</p>
+                <p>5.30 PM - 9.00 PM</p>
             </div>
         </aside>
         <footer class="footer">
@@ -104,12 +145,12 @@
 
     <!-- He asked banner -->
     <div class="gallery-container">
-        <img class="banner" src="/assets/images/banner/C+J-1(wide).jpg" alt="cute couple">
+        <img class="banner" src="https://ik.imagekit.io/i1zomewktwg/c_j-4_DLliVy3LPu.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651558331301" alt="cute couple">
         <div class="gallery-content center">He asked...</div>
     </div>
 
     <div id="registry" class="gift">
-        <div class="story-content center">
+        <div class="story-content">
             <h1>Registry</h1>
             <p>
                 Having your presence at our wedding is all that we wish for.
@@ -118,12 +159,21 @@
         </div>
     </div>
 
-    <a class="zola-registry-embed" href="www.zola.com/registry/jonnelandcindy" data-registry-key="jonnelandcindy">Our
-        Zola Wedding Registry</a>
-    <script>!function (e, t, n) { var s, a = e.getElementsByTagName(t)[0]; e.getElementById(n) || (s = e.createElement(t), s.id = n, s.async = !0, s.src = "https://widget.zola.com/js/widget.js", a.parentNode.insertBefore(s, a)) }(document, "script", "zola-wjs");</script>
+    <div class="zola">
+        <a class="zola-registry-embed" href="www.zola.com/registry/jonnelandcindy" data-registry-key="jonnelandcindy">Our
+            Zola Wedding Registry</a>
+        <script>!function (e, t, n) { var s, a = e.getElementsByTagName(t)[0]; e.getElementById(n) || (s = e.createElement(t), s.id = n, s.async = !0, s.src = "https://widget.zola.com/js/widget.js", a.parentNode.insertBefore(s, a)) }(document, "script", "zola-wjs");</script>
+    </div>
 
     <div class="gallery-container">
-        <img src="./assets/images/banner/CindyJonnel-InezJPhoto-452.jpg" alt="cute couple">
+        <img srcset = "https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-256,h-171/CindyJonnel-InezJPhoto-452__ilLjTTeG.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 256w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-311,h-207/CindyJonnel-InezJPhoto-452__ilLjTTeG.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 311w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-362,h-241/CindyJonnel-InezJPhoto-452__ilLjTTeG.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 362w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-704,h-469/CindyJonnel-InezJPhoto-452__ilLjTTeG.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 704w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-960,h-640/CindyJonnel-InezJPhoto-452__ilLjTTeG.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 960w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-1376,h-917/CindyJonnel-InezJPhoto-452__ilLjTTeG.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 1376w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-2496,h-1664/CindyJonnel-InezJPhoto-452__ilLjTTeG.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 2496w" sizes="(max-width: 320px) 256px,
+        (max-width: 375px) 311px,
+        (max-width: 425px) 362px,
+        (max-width: 768px) 704px,
+        (max-width: 1024px) 960px,
+        (max-width: 1440px) 1376px,
+        (max-width: 2560px) 2496px
+       2400px" src="https://ik.imagekit.io/i1zomewktwg/CindyJonnel-InezJPhoto-452__ilLjTTeG.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327378" alt="cute couple">
         <div class="gallery-content center">She said finally!</div>
     </div>
 
@@ -151,7 +201,7 @@
                 <li>What should I wear?</li>
                 <ul>
                     <li>
-                        It'll be pastel themed wedding.
+                        It will be pastel themed wedding.
                         Wear any of these colors TODO:[insert link].
                         However, if you don't have any pastel themed colors,
                         please wear what you have.
@@ -173,8 +223,8 @@
                 <li>What time should I arrive?</li>
                 <ul>
                     <li>
-                        Ceremony starts at 3PM. If you'd like to attend the ceremony, please arrive around 2:30 - 2:55
-                        PM. If you'd like to attend just the reception, please arrive during cocktail hours 4.30 PM -
+                        Ceremony starts at 3PM. If you'd like to attend the ceremony, please arrive around 2.30 - 2.55
+                        PM. <br>If you'd like to attend just the reception, please arrive during cocktail hours 4.30 PM -
                         5.30 PM.
                     </li>
                 </ul>
@@ -194,7 +244,7 @@
                 <li>Will it be indoors or outdoors?</li>
                 <ul>
                     <li>
-                        The ceremony will be outdoor and the reception will be indoor.
+                        We will be having an outdoor ceremony, with an indoor reception.
                     </li>
                 </ul>
                 <li>What will the weather be like?</li>
@@ -208,8 +258,8 @@
                 <ul>
                     <li>
                         Yes! Feel free to share our happiness w/ the world.
-                        Using our hashtags #LetJOHeartBeYORGuidingKey.
-                        However, please be mindful of our photographers during the event.
+                        Using our hashtags #LetJOheartBeYORguidingKey.
+                        <br>However, please be mindful of our photographers during the event.
                     </li>
                 </ul>
                 <li>Will there be an open bar?</li>
@@ -222,7 +272,7 @@
                 <li>Can I bring my gift to the wedding?</li>
                 <ul>
                     <li>
-                        Yes, there will be a gift table & gift box.
+                        Yes, there will be a gift table & card box.
                     </li>
                 </ul>
             </ol>
@@ -234,13 +284,8 @@
 
     // Parallax 
     const images = document.querySelectorAll("div.gallery-container > img");
-    // const heaskedBanner = document.getElementsByClassName('banner');
-    // new simpleParallax(heaskedBanner, {
-    //     scale: 1.2,
-    //     orientation: 'down'
-    // });
     new simpleParallax(images, {
-        scale: 1.6,
+        scale: 1.3,
         orientation: 'down'
     });
 
@@ -292,24 +337,372 @@
     }
 
     // Masonry Gallery
-    let maxGridX = 20;
+    let maxGridX = 45;
     let maxGridY = 5;
+    // let galleryImages = [
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-038.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-085.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-105.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-129.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-158.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-173.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-216.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-246.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-261.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-274.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-290.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-306.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-402.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-414.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-421.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-430.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-458.jpg",
+    //     "./assets/images/gallery/CindyJonnel-InezJPhoto-496.jpg",
+    //     "./assets/images/gallery/9.gif",
+    //     "./assets/images/gallery/10.jpg",
+    //     "./assets/images/gallery/8.jpg",
+    //     "./assets/images/gallery/7.jpg",
+    //     "./assets/images/gallery/6.jpg",
+    //     "./assets/images/gallery/5.jpg",
+    //     "./assets/images/gallery/4.jpg",
+    //     "./assets/images/gallery/3.jpg",
+    //     "./assets/images/gallery/2.jpg",
+    //     "./assets/images/gallery/1.jpg",]; 
+
+    let imageSrc = [
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-038_z_Z8kHPUV.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476584",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-085_y_og9qNib.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478520",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-105_-rD81shoe.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482898",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-129_ziHscXKvE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480813",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-158_pv0f2gx_H.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299471759",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-173_uVSwglX_wq.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299475298",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-216_YwCJaBnT2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299474082",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-246_9BJ4V2Wtmn.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478918",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-261_sqdZkKE38B.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477271",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-274_LNAsj1qUT.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482952",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-290_X3X_SO6T1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482285",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-306_gHesvaKaJ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299475012",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-402_z2C3XJuf7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476372",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-414_ZqV7zWR_p.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478044",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-421_zzCROw_P7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476878",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-430_wjElTr9-K.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480453",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-458_xHxmGfbSUD.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477331",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-491_DEZYS7Jcl.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477013",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/CindyJonnel-InezJPhoto-496_v1W2-HbGz.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480260",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/9.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1651304572011",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/10.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304585151",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/8.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304547234",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/6.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304528614",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/5.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304515912",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/4.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304503618",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/3.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304474235",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304449827",
+        "https://ik.imagekit.io/i1zomewktwg/gallery/1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304413706",
+        
+    ];
+
+    let imageSrcSet = [
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-435/gallery/CindyJonnel-InezJPhoto-038_z_Z8kHPUV.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476584 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-435/gallery/CindyJonnel-InezJPhoto-038_z_Z8kHPUV.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476584 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-435/gallery/CindyJonnel-InezJPhoto-038_z_Z8kHPUV.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476584 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-547/gallery/CindyJonnel-InezJPhoto-038_z_Z8kHPUV.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476584 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-805/gallery/CindyJonnel-InezJPhoto-038_z_Z8kHPUV.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476584 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-805/gallery/CindyJonnel-InezJPhoto-038_z_Z8kHPUV.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476584 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-1545/gallery/CindyJonnel-InezJPhoto-038_z_Z8kHPUV.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476584 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-435/gallery/CindyJonnel-InezJPhoto-085_y_og9qNib.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478520 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-435/gallery/CindyJonnel-InezJPhoto-085_y_og9qNib.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478520 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-435/gallery/CindyJonnel-InezJPhoto-085_y_og9qNib.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478520 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-547/gallery/CindyJonnel-InezJPhoto-085_y_og9qNib.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478520 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-805/gallery/CindyJonnel-InezJPhoto-085_y_og9qNib.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478520 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-805/gallery/CindyJonnel-InezJPhoto-085_y_og9qNib.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478520 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-1545/gallery/CindyJonnel-InezJPhoto-085_y_og9qNib.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478520 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-164/gallery/CindyJonnel-InezJPhoto-105_-rD81shoe.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482898 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-164/gallery/CindyJonnel-InezJPhoto-105_-rD81shoe.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482898 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-164/gallery/CindyJonnel-InezJPhoto-105_-rD81shoe.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482898 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-213/gallery/CindyJonnel-InezJPhoto-105_-rD81shoe.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482898 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-312/gallery/CindyJonnel-InezJPhoto-105_-rD81shoe.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482898 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-312/gallery/CindyJonnel-InezJPhoto-105_-rD81shoe.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482898 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-608/gallery/CindyJonnel-InezJPhoto-105_-rD81shoe.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482898 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-254/gallery/CindyJonnel-InezJPhoto-129_ziHscXKvE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480813 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-254/gallery/CindyJonnel-InezJPhoto-129_ziHscXKvE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480813 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-254/gallery/CindyJonnel-InezJPhoto-129_ziHscXKvE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480813 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-328/gallery/CindyJonnel-InezJPhoto-129_ziHscXKvE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480813 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-476/gallery/CindyJonnel-InezJPhoto-129_ziHscXKvE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480813 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-476/gallery/CindyJonnel-InezJPhoto-129_ziHscXKvE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480813 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-920/gallery/CindyJonnel-InezJPhoto-129_ziHscXKvE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480813 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-254/gallery/CindyJonnel-InezJPhoto-158_pv0f2gx_H.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299471759 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-254/gallery/CindyJonnel-InezJPhoto-158_pv0f2gx_H.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299471759 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-254/gallery/CindyJonnel-InezJPhoto-158_pv0f2gx_H.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299471759 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-328/gallery/CindyJonnel-InezJPhoto-158_pv0f2gx_H.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299471759 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-476/gallery/CindyJonnel-InezJPhoto-158_pv0f2gx_H.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299471759 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-476/gallery/CindyJonnel-InezJPhoto-158_pv0f2gx_H.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299471759 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-920/gallery/CindyJonnel-InezJPhoto-158_pv0f2gx_H.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299471759 512w`
+               
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-254/gallery/CindyJonnel-InezJPhoto-173_uVSwglX_wq.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299475298 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-254/gallery/CindyJonnel-InezJPhoto-173_uVSwglX_wq.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299475298 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-254/gallery/CindyJonnel-InezJPhoto-173_uVSwglX_wq.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299475298 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-328/gallery/CindyJonnel-InezJPhoto-173_uVSwglX_wq.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299475298 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-476/gallery/CindyJonnel-InezJPhoto-173_uVSwglX_wq.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299475298 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-476/gallery/CindyJonnel-InezJPhoto-173_uVSwglX_wq.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299475298 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-920/gallery/CindyJonnel-InezJPhoto-173_uVSwglX_wq.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299475298 512w`
+        ,
+        
+          ` https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-336,h-164/gallery/CindyJonnel-InezJPhoto-216_YwCJaBnT2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299474082 336w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-391,h-164/gallery/CindyJonnel-InezJPhoto-216_YwCJaBnT2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299474082 391w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-442,h-164/gallery/CindyJonnel-InezJPhoto-216_YwCJaBnT2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299474082 442w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-323,h-213/gallery/CindyJonnel-InezJPhoto-216_YwCJaBnT2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299474082 323w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-426,h-312/gallery/CindyJonnel-InezJPhoto-216_YwCJaBnT2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299474082 426w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-492,h-312/gallery/CindyJonnel-InezJPhoto-216_YwCJaBnT2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299474082 492w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-1040,h-608/gallery/CindyJonnel-InezJPhoto-216_YwCJaBnT2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299474082 1040w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-164/gallery/CindyJonnel-InezJPhoto-246_9BJ4V2Wtmn.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478918 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-164/gallery/CindyJonnel-InezJPhoto-246_9BJ4V2Wtmn.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478918 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-164/gallery/CindyJonnel-InezJPhoto-246_9BJ4V2Wtmn.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478918 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-213/gallery/CindyJonnel-InezJPhoto-246_9BJ4V2Wtmn.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478918 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-312/gallery/CindyJonnel-InezJPhoto-246_9BJ4V2Wtmn.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478918 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-312/gallery/CindyJonnel-InezJPhoto-246_9BJ4V2Wtmn.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478918 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-608/gallery/CindyJonnel-InezJPhoto-246_9BJ4V2Wtmn.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478918 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-254/gallery/CindyJonnel-InezJPhoto-261_sqdZkKE38B.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477271 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-254/gallery/CindyJonnel-InezJPhoto-261_sqdZkKE38B.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477271 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-254/gallery/CindyJonnel-InezJPhoto-261_sqdZkKE38B.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477271 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-328/gallery/CindyJonnel-InezJPhoto-261_sqdZkKE38B.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477271 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-476/gallery/CindyJonnel-InezJPhoto-261_sqdZkKE38B.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477271 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-476/gallery/CindyJonnel-InezJPhoto-261_sqdZkKE38B.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477271 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-920/gallery/CindyJonnel-InezJPhoto-261_sqdZkKE38B.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477271 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-164/gallery/CindyJonnel-InezJPhoto-274_LNAsj1qUT.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482952 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-164/gallery/CindyJonnel-InezJPhoto-274_LNAsj1qUT.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482952 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-164/gallery/CindyJonnel-InezJPhoto-274_LNAsj1qUT.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482952 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-213/gallery/CindyJonnel-InezJPhoto-274_LNAsj1qUT.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482952 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-312/gallery/CindyJonnel-InezJPhoto-274_LNAsj1qUT.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482952 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-312/gallery/CindyJonnel-InezJPhoto-274_LNAsj1qUT.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482952 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-608/gallery/CindyJonnel-InezJPhoto-274_LNAsj1qUT.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482952 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-254/gallery/CindyJonnel-InezJPhoto-290_X3X_SO6T1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482285 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-254/gallery/CindyJonnel-InezJPhoto-290_X3X_SO6T1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482285 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-254/gallery/CindyJonnel-InezJPhoto-290_X3X_SO6T1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482285 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-328/gallery/CindyJonnel-InezJPhoto-290_X3X_SO6T1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482285 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-476/gallery/CindyJonnel-InezJPhoto-290_X3X_SO6T1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482285 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-476/gallery/CindyJonnel-InezJPhoto-290_X3X_SO6T1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482285 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-920/gallery/CindyJonnel-InezJPhoto-290_X3X_SO6T1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299482285 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-435/gallery/CindyJonnel-InezJPhoto-306_gHesvaKaJ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299475012 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-435/gallery/CindyJonnel-InezJPhoto-306_gHesvaKaJ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299475012 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-435/gallery/CindyJonnel-InezJPhoto-306_gHesvaKaJ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299475012 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-547/gallery/CindyJonnel-InezJPhoto-306_gHesvaKaJ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299475012 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-805/gallery/CindyJonnel-InezJPhoto-306_gHesvaKaJ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299475012 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-805/gallery/CindyJonnel-InezJPhoto-306_gHesvaKaJ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299475012 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-1545/gallery/CindyJonnel-InezJPhoto-306_gHesvaKaJ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299475012 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-435/gallery/CindyJonnel-InezJPhoto-402_z2C3XJuf7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476372 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-435/gallery/CindyJonnel-InezJPhoto-402_z2C3XJuf7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476372 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-435/gallery/CindyJonnel-InezJPhoto-402_z2C3XJuf7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476372 213,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-547/gallery/CindyJonnel-InezJPhoto-402_z2C3XJuf7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476372 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-805/gallery/CindyJonnel-InezJPhoto-402_z2C3XJuf7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476372 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-805/gallery/CindyJonnel-InezJPhoto-402_z2C3XJuf7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476372 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-1545/gallery/CindyJonnel-InezJPhoto-402_z2C3XJuf7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476372 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-435/gallery/CindyJonnel-InezJPhoto-414_ZqV7zWR_p.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478044 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-435/gallery/CindyJonnel-InezJPhoto-414_ZqV7zWR_p.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478044 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-435/gallery/CindyJonnel-InezJPhoto-414_ZqV7zWR_p.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478044 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-547/gallery/CindyJonnel-InezJPhoto-414_ZqV7zWR_p.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478044 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-805/gallery/CindyJonnel-InezJPhoto-414_ZqV7zWR_p.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478044 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-805/gallery/CindyJonnel-InezJPhoto-414_ZqV7zWR_p.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478044 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-1545/gallery/CindyJonnel-InezJPhoto-414_ZqV7zWR_p.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299478044 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-164/gallery/CindyJonnel-InezJPhoto-421_zzCROw_P7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476878 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-164/gallery/CindyJonnel-InezJPhoto-421_zzCROw_P7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476878 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-164/gallery/CindyJonnel-InezJPhoto-421_zzCROw_P7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476878 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-213/gallery/CindyJonnel-InezJPhoto-421_zzCROw_P7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476878 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-312/gallery/CindyJonnel-InezJPhoto-421_zzCROw_P7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476878 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-312/gallery/CindyJonnel-InezJPhoto-421_zzCROw_P7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476878 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-608/gallery/CindyJonnel-InezJPhoto-421_zzCROw_P7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299476878 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-164/gallery/CindyJonnel-InezJPhoto-430_wjElTr9-K.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480453 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-164/gallery/CindyJonnel-InezJPhoto-430_wjElTr9-K.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480453 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-164/gallery/CindyJonnel-InezJPhoto-430_wjElTr9-K.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480453 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-213/gallery/CindyJonnel-InezJPhoto-430_wjElTr9-K.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480453 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-312/gallery/CindyJonnel-InezJPhoto-430_wjElTr9-K.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480453 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-312/gallery/CindyJonnel-InezJPhoto-430_wjElTr9-K.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480453 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-608/gallery/CindyJonnel-InezJPhoto-430_wjElTr9-K.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480453 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-74/gallery/CindyJonnel-InezJPhoto-458_xHxmGfbSUD.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477331 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-74/gallery/CindyJonnel-InezJPhoto-458_xHxmGfbSUD.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477331 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-212,h-74/gallery/CindyJonnel-InezJPhoto-458_xHxmGfbSUD.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477331 212w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-99/gallery/CindyJonnel-InezJPhoto-458_xHxmGfbSUD.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477331 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-148/gallery/CindyJonnel-InezJPhoto-458_xHxmGfbSUD.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477331 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-148/gallery/CindyJonnel-InezJPhoto-458_xHxmGfbSUD.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477331 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-296/gallery/CindyJonnel-InezJPhoto-458_xHxmGfbSUD.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477331 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-74,c-at_max/gallery/CindyJonnel-InezJPhoto-491_DEZYS7Jcl.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477013 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-74,c-at_max/gallery/CindyJonnel-InezJPhoto-491_DEZYS7Jcl.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477013 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-62,c-at_max/gallery/CindyJonnel-InezJPhoto-491_DEZYS7Jcl.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477013 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-99,c-at_max/gallery/CindyJonnel-InezJPhoto-491_DEZYS7Jcl.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477013 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-148,c-at_max/gallery/CindyJonnel-InezJPhoto-491_DEZYS7Jcl.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477013 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-148,c-at_max/gallery/CindyJonnel-InezJPhoto-491_DEZYS7Jcl.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477013 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-296,c-at_max/gallery/CindyJonnel-InezJPhoto-491_DEZYS7Jcl.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299477013 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-164/gallery/CindyJonnel-InezJPhoto-496_v1W2-HbGz.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480260 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-164/gallery/CindyJonnel-InezJPhoto-496_v1W2-HbGz.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480260 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-164/gallery/CindyJonnel-InezJPhoto-496_v1W2-HbGz.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480260 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-213/gallery/CindyJonnel-InezJPhoto-496_v1W2-HbGz.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480260 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-312/gallery/CindyJonnel-InezJPhoto-496_v1W2-HbGz.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480260 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-312/gallery/CindyJonnel-InezJPhoto-496_v1W2-HbGz.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480260 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-608/gallery/CindyJonnel-InezJPhoto-496_v1W2-HbGz.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651299480260 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-164/gallery/9.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1651304572011 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-164/gallery/9.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1651304572011 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-164/gallery/9.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1651304572011 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-213/gallery/9.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1651304572011 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-312/gallery/9.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1651304572011 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-312/gallery/9.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1651304572011 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-608/gallery/9.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1651304572011 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-254/gallery/10.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304585151 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-254/gallery/10.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304585151 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-254/gallery/10.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304585151 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-328/gallery/10.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304585151 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-476/gallery/10.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304585151 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-476/gallery/10.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304585151 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-920/gallery/10.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304585151 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-164/gallery/8.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-164/gallery/8.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-164/gallery/8.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-213/gallery/8.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-312/gallery/8.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-312/gallery/8.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-608/gallery/8.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-254/gallery/7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-254/gallery/7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-254/gallery/7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-328/gallery/7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-476/gallery/7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-476/gallery/7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-920/gallery/7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-164,c-at_max/gallery/6.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-164,c-at_max/gallery/6.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-164,c-at_max/gallery/6.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-213,c-at_max/gallery/6.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-312,c-at_max/gallery/6.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-312,c-at_max/gallery/6.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-608,c-at_max/gallery/6.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-164/gallery/5.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-164/gallery/5.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-164/gallery/5.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-213/gallery/5.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-312/gallery/5.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-312/gallery/5.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-608/gallery/5.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-254/gallery/4.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-254/gallery/4.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-254/gallery/4.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-328/gallery/4.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-476/gallery/4.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-476/gallery/4.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-920/gallery/4.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 512w`
+        ,
+        
+           `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-435,c-at_max/gallery/3.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 160w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-435,c-at_max/gallery/3.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 188w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-435,c-at_max/gallery/3.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 213w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-547,c-at_max/gallery/3.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 154w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-805,c-at_max/gallery/3.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 205w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-805,c-at_max/gallery/3.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 288w,
+           https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-1545,c-at_max/gallery/3.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 512w`
+        ,
+        
+            `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-164,c-at_max/gallery/2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 160w,
+            https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-164,c-at_max/gallery/2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 188w,
+            https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-164,c-at_max/gallery/2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 213w,
+            https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-213,c-at_max/gallery/2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 154w,
+            https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-312,c-at_max/gallery/2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 205w,
+            https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-312,c-at_max/gallery/2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 288w,
+            https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-608,c-at_max/gallery/2.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 512w`
+        ,
+            `https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-160,h-254,c-at_max/gallery/1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 160w,
+            https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-188,h-254,c-at_max/gallery/1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 188w,
+            https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-213,h-254,c-at_max/gallery/1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 213w,
+            https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-154,h-328,c-at_max/gallery/1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 154w,
+            https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-205,h-476,c-at_max/gallery/1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 205w,
+            https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-288,h-476,c-at_max/gallery/1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 288w,
+            https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-384,h-436,c-at_max/gallery/1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 384w,
+            https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-512,h-920,c-at_max/gallery/1.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651304559152 512w,`
+    ];
+
+    let imageSizes = [
+        `(max-width: 320px) 160px,
+         (max-width: 375px) 188px,
+         (max-width: 425px) 213px,
+         (max-width: 768px) 154px,
+         (max-width: 1024px) 205px,
+         (max-width: 1440px) 288px,
+         (max-width: 1920px) 384px
+        512px`
+    ]
+    // Grid sizes
+    class Size {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+    }
 
     class Pic {
-        constructor() {
+        constructor(size) {
             this.startX = 0;
             this.startY = 0;
-            this.width = Math.max(1, Math.round(Math.random() * 3));
-            this.height = Math.max(1, Math.round(Math.random() * 3));
+            this.width = size.width;
+            this.height = size.height;
+            
         }
 
         getElement() {
             var figure = document.createElement("figure");
             figure.classList.add("cell")
 
-            var srcAsset = "./assets/images/c+j-12.jpg";
-            var image = document.createElement("img")
+            var srcAsset = imageSrc.pop();
+            var image = document.createElement("img");
+            image.srcset = imageSrcSet.pop();
+            image.sizes = imageSizes[0];
             image.src = srcAsset;
+            image.loading = "lazy";
 
             figure.append(image)
             figure.style.gridColumn = `${this.startX + 1} / span ${this.width}`
@@ -323,11 +716,21 @@
 
     function loadPictureGallery() {
         var masonry = document.getElementById("masonry");
+        let imageSizes = [new Size(1,3), new Size(1,2), new Size(1,5),
+                          new Size(1,3), new Size(1,2), new Size(1,2),
+                          new Size(1,3), new Size(1,2), new Size(1,3), 
+                          new Size(1,2), new Size(1,2), new Size(1,2),
+                          new Size(1,1), new Size(1,2), new Size(1,2), // nose
+                          new Size(1,5), new Size(1,5), new Size(1,5), // bridge
+                          new Size(1,3), new Size(1,2), new Size(1,3), // self
+                          new Size(1,2), new Size(2,2), new Size(1,3), 
+                          new Size(1,3), new Size(1,3), new Size(1,2), 
+                          new Size(1,5), new Size(1,5)];
 
         let grid = initializeGrid();
         let pics = [];
-        for (let temp = 0; temp < 20; temp++) {
-            pics.push(new Pic());
+        for (let temp = 0; temp < imageSrc.length; temp++) {
+            pics.push(new Pic(imageSizes[temp]));
         }
 
         pics.forEach((pic) => {
