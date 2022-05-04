@@ -24,8 +24,7 @@
         <nav id="sidenav" style="display:none;">
             <a data-scroll href="#home">Home</a>
             <a data-scroll href="#story">Our Story</a>
-            <a data-scroll href="#whenwhere">When & Where</a>
-            <a data-scroll href="#map">RSVP</a>
+            <a data-scroll href="#whenwhere">RSVP</a>
             <a data-scroll href="#registry">Registry</a>
             <a data-scroll href="#gallery">Gallery</a>
             <a data-scroll href="#faq">FAQ</a>
@@ -39,6 +38,7 @@
     </div>
 
     <div id="home" class="gallery-container">
+        
         <img srcset = "https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-256,h-171/home_banner_3200w_6mwAXOfpX?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 256w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-311,h-207/home_banner_3200w_6mwAXOfpX?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 311w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-362,h-241/home_banner_3200w_6mwAXOfpX?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 362w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-704,h-469/home_banner_3200w_6mwAXOfpX?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 704w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-960,h-640/home_banner_3200w_6mwAXOfpX?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 960w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-1376,h-917/home_banner_3200w_6mwAXOfpX?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 1376w, https://ik.imagekit.io/i1zomewktwg/tr:q-85,w-2496,h-1664/home_banner_3200w_6mwAXOfpX?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327 2496w" sizes="(max-width: 320px) 256px,
         (max-width: 375px) 311px,
         (max-width: 425px) 362px,
@@ -47,7 +47,7 @@
         (max-width: 1440px) 1376px,
         (max-width: 2560px) 2496px
        2400px" src="https://ik.imagekit.io/i1zomewktwg/home_banner_3200w_6mwAXOfpX?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327327" alt="cute couple">
-        <div class="gallery-content center">
+        <div class="gallery-content top-left">
             <p>Jonnel & Cindy</p>
             <p>10.02.22</p>
         </div>
@@ -94,12 +94,12 @@
         (max-width: 1440px) 1376px,
         (max-width: 2560px) 2496px
        2400px" src="https://ik.imagekit.io/i1zomewktwg/CindyJonnel-InezJPhoto-421__1sit_d8Y.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306326011" alt="cute couple">
-        <div class="gallery-content center">Best Friends</div>
+        <div class="gallery-content center-bottom">Best Friends</div>
     </div>
 
 
     <!-- Ceremony/Reception Information -->
-    <div class="wrapper">
+    <div id="whenwhere" class="wrapper">
         <header class="header">Sunday, October 2nd, 2022</header>
         <aside class="aside">
             <div class="flex-column">
@@ -137,7 +137,7 @@
                 <div id="map" class="map">
                     <a href="https://tinyurl.com/2p898txp" target="_blank" rel="noreferrer noopener"><button
                             class="css-button-fully-rounded--red">Map</button></a>
-                    <a href="https://jc2022.rsvpify.com/rsvp-page-preview/149630?signature=0af8c394bdb90ac7f45828bfdd0ff20342f907e054240ac16115c69df29bafc9"
+                    <a href="https://jonnelcindy.rsvpify.com/"
                         target="_blank" rel="noreferrer noopener"><button
                             class="css-button-fully-rounded--red">RSVP</button></a>
                 </div>
@@ -148,7 +148,7 @@
     <!-- He asked banner -->
     <div class="gallery-container">
         <img class="banner" src="https://ik.imagekit.io/i1zomewktwg/c_j-4_DLliVy3LPu.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651558331301" alt="cute couple">
-        <div class="gallery-content center">He asked...</div>
+        <div class="gallery-content center-top">He asked...</div>
     </div>
 
     <div id="registry" class="gift">
@@ -176,7 +176,7 @@
         (max-width: 1440px) 1376px,
         (max-width: 2560px) 2496px
        2400px" src="https://ik.imagekit.io/i1zomewktwg/CindyJonnel-InezJPhoto-452__ilLjTTeG.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1651306327378" alt="cute couple">
-        <div class="gallery-content center">She said finally!</div>
+        <div class="gallery-content top-left-corner">She said finally!</div>
     </div>
 
     <div class="gallery-header">
@@ -284,42 +284,6 @@
 
 <script>
 
-    let slideIndex = 1;
-
-    function changeSlide(n) {
-	    showSlide(slideIndex += n);
-    }
-
-    function toSlide(n) {
-	    showSlide(slideIndex = n);
-    }
-
-    function showSlide(n) {
-
-        // const slides = document.getElementsByClassName('cell');
-        const slides = document.querySelectorAll('.cell > img');
-        let mImage = document.getElementById('modal-image');
-        mImage.src = slides[n].src;
-
-        if (n > slides.length) {
-            slideIndex = 1;	
-        }
-
-        if (n < 1) {
-            slideIndex = slides.length;
-        }
-
-        // for (let i = 0; i < slides.length; i++) {
-        //     slides[i].style.display = "none";
-        // }
-        // for (let i = 0; i < modalPreviews.length; i++) {
-        //     modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
-        // }
-
-        // slides[slideIndex - 1].style.display = 'block';
-        // modalPreviews[slideIndex - 1].className += ' active';
-    }
-
     // Parallax 
     const images = document.querySelectorAll("div.gallery-container > img");
     new simpleParallax(images, {
@@ -327,6 +291,7 @@
         orientation: 'down'
     });
 
+    // Smooth scrolling
     var scroll = new SmoothScroll('[data-scroll]', {
         speed: 650,
         easing: 'easeOutCubic'
@@ -714,6 +679,7 @@
          (max-width: 1920px) 384px
         512px`
     ]
+
     // Grid sizes
     class Size {
         constructor(width, height) {
@@ -749,7 +715,7 @@
             figure.onclick = function () {
                 openModal(srcAsset);
             }
-            figure.addEventListener('click', function (count) {
+            figure.addEventListener('click', function () {
                 showSlide(count);
             });
             return figure;
@@ -774,7 +740,7 @@
         for (let temp = 0; temp < imageSrc.length; temp++) {
             pics.push(new Pic(imageSizes[temp]));
         }
-        let count = 1;
+        let count = 0;
         pics.forEach((pic) => {
             pic.startX = getStartX(grid);
             pic.startY = getStartY(grid);
@@ -887,6 +853,29 @@
     }
 
     loadPictureGallery();
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.cell > img');
+
+    function changeSlide(n) {
+        slideIndex += n;
+        if(slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        if(slideIndex < 0) {
+            slideIndex = slides.length - 1;
+        }
+	    showSlide(slideIndex);
+    }
+
+    function toSlide(n) {
+	    showSlide(slideIndex = n);
+    }
+
+    function showSlide(n) {
+        slideIndex = n;
+        let mImage = document.getElementById('modal-image');
+        mImage.src = slides[n].src;
+    }
     closeModal();
 </script>
 

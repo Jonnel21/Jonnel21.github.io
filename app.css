@@ -31,6 +31,7 @@ html {
     overflow-y: hidden;
     /* Disable horizontal scroll */
     height: 100%;
+    width: 10%;
 }
 
 #sidenavIcon {
@@ -48,6 +49,16 @@ html {
     color: black;
     display: block;
 }
+
+/* font for 'When & Where' */
+/* #sidenav a:nth-child(3){
+    font-size: 1.5rem;
+} */
+
+/* font for 'Our Story' */
+/* #sidenav a:nth-child(2){
+    font-size: 1.7rem;
+} */
 
 .sidenav a:hover {
     color: #f1f1f1;
@@ -103,6 +114,56 @@ html {
     object-position: center top;
 }
 
+.top-left {
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center-bottom {
+    margin: 0;
+    position: absolute;
+    top: 70%;
+    left: 53%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center-top {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center-corner-left {
+    margin: 0;
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /* text-align: center; */
+}
+
+.top-left-corner {
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
 /* Center text on top of banner */
 .center {
     margin: 0;
@@ -153,6 +214,7 @@ html {
     font-family: var(--satisfy);
     font-size: 6rem;
     color: black;
+
 }
 
 .banner-container {
@@ -201,6 +263,7 @@ html {
 
 .story-content {
     margin: auto;
+    position:relative;
     font-size: 1.4rem;
     /* font-family: var(--caveat); */
     /* font-family: var(--sulfur); */
@@ -303,10 +366,7 @@ html {
 }
 
 .faqs-container {
-    background-image: url("/assets/images/florals/pngegg-2.png");
-    background-repeat: repeat-x;
-    background-size: cover;
-    padding-bottom: 3%;
+    position: relative;
 }
 
 .faqs-container h1 {
@@ -315,6 +375,28 @@ html {
     /* font-family: var(--sulfur); */
     font-family: brandon-regular-italic;
     font-size: 3.5rem;
+    position: relative;
+}
+
+.faqs-container ol {
+    position: relative;
+}
+
+
+.faqs-container::before {
+    content: "";
+    background-image: url("https://ik.imagekit.io/i1zomewktwg/flowers/faq-flower_8Y6zOikQU?ik-sdk-version=javascript-1.4.3&updatedAt=1651648588820");
+    background-position: 80% 40%;
+    /* background-repeat: repeat; */
+    /* background-size: cover; */
+    padding-bottom: 3%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.62;
+    /* opacity: 1; */
 }
 
 .zola {
@@ -709,7 +791,7 @@ html {
   top: 50%;
   width: auto;
   padding: 16px;
-  margin-top: -50px;
+  margin-top: -10vh;
   color: white;
   font-weight: bold;
   font-size: 20px;
