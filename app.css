@@ -388,7 +388,8 @@ html {
 #faq p {
     text-align: right;
     font-family: "brandon-regular-italic";
-    padding-right:1em;
+    padding-right:0.5em;
+    font-size: 1rem;
 
 }
 
@@ -396,6 +397,12 @@ html {
 @media only screen and (max-width: 364px) {
     #faq p {
         font-size:0.8em;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #faq p {
+        font-size:1.5rem;
     }
 }
 
@@ -690,6 +697,9 @@ html {
     body {
         padding: 0em;
     }
+    #faq p {
+        text-align: center;
+    }
 }
 
 /* Faqs on larger display */
@@ -780,7 +790,6 @@ html {
 @media only screen and (min-width: 1440px) {
     .sidenav a {
         font-size: 2rem;
-        padding: 6%;
     }
 
 }
@@ -828,6 +837,12 @@ html {
         border-radius: 50px;
     }
     #sidenavIcon {
-        transform:scale(2);
+        transform:scale(1.5);
+    }
+    .sidenav a {
+        font-size: 4rem;
+    }
+    #faq p {
+        font-size: 2rem;
     }
 }
