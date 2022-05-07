@@ -6,10 +6,6 @@
 :root {
     /* use for header */
     --satisfy: 'Satisfy', cursive;
-    --sac: 'Sacramento', cursive;
-    /* use for story content*/
-    --caveat: 'Caveat', cursive;
-    --sulfur: 'Sulphur Point'
 }
 
 body {
@@ -43,21 +39,10 @@ html {
     padding: 6px 10px 6px 10px;
     text-decoration: none;
     font-size: 2rem;
-    /* font-family: var(--caveat); */
     font-family: brandon-regular-italic;
     color: black;
     display: block;
 }
-
-/* font for 'When & Where' */
-/* #sidenav a:nth-child(3){
-    font-size: 1.5rem;
-} */
-
-/* font for 'Our Story' */
-/* #sidenav a:nth-child(2){
-    font-size: 1.7rem;
-} */
 
 .sidenav a:hover {
     color: #f1f1f1;
@@ -65,6 +50,34 @@ html {
 
 .sidenav ul {
     list-style: none;
+}
+
+/* Lightbox */
+.previous,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -10vh;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.previous:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 #story {
@@ -177,7 +190,6 @@ html {
 .gallery-header {
     text-align: center;
     font-size: 2rem;
-    /* font-family: var(--caveat); */
     font-family: brandon-regular-italic;
 }
 
@@ -204,7 +216,6 @@ html {
 
 .gallery-contianer h1 {
     text-align: center;
-    font-family: var(--caveat);
 }
 
 .gallery-content {
@@ -264,8 +275,6 @@ html {
     margin: auto;
     position:relative;
     font-size: 1.4rem;
-    /* font-family: var(--caveat); */
-    /* font-family: var(--sulfur); */
     font-family: brandon-regular-italic;
     color: black;
 }
@@ -304,7 +313,6 @@ html {
 
 .flex-column p {
     text-align: center;
-    /* font-family: var(--caveat); */
     font-family: brandon-regular-italic;
     font-size: 2rem;
     margin: auto;
@@ -316,7 +324,6 @@ html {
 }
 
 .location {
-    /* font-family: var(--caveat); */
     font-family: brandon-regular-italic;
     text-align: center;
     font-size: 2rem;
@@ -330,7 +337,6 @@ html {
 }
 
 .date {
-    /* font-family: var(--caveat); */
     font-family: brandon-regular-italic;
     text-align: center;
     font-size: 2.5rem;
@@ -366,12 +372,14 @@ html {
 
 .faqs-container {
     position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
-.faqs-container h1 {
+#faq h1 {
     text-align: center;
-    /* font-family: var(--caveat); */
-    /* font-family: var(--sulfur); */
     font-family: brandon-regular-italic;
     font-size: 3.5rem;
     position: relative;
@@ -385,17 +393,15 @@ html {
 .faqs-container::before {
     content: "";
     background-image: url("https://ik.imagekit.io/i1zomewktwg/flowers/faq-flower_8Y6zOikQU?ik-sdk-version=javascript-1.4.3&updatedAt=1651648588820");
-    background-position: 80% 40%;
-    /* background-repeat: repeat; */
-    /* background-size: cover; */
-    padding-bottom: 3%;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: cover;
     position: absolute;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
     opacity: 0.62;
-    /* opacity: 1; */
 }
 
 .zola {
@@ -403,12 +409,6 @@ html {
     align-items: center;
     justify-content: center;
 
-}
-
-/* Zola Registry Gift Items */
-.gift-container {
-    display: flex;
-    width: 100%;
 }
 
 #gallery {
@@ -447,16 +447,6 @@ html {
     opacity: 0.5;
     cursor: pointer;
 }
-
-/* kccc banquet */
-/* #masonry figure:nth-child(1) img {
-    object-position: 50% 5%;
-} */
-
-/* dab */
-/* #masonry figure:nth-child(2) img {
-    object-position: 50% 90%;
-} */
 
 /* beach day */
 #masonry figure:nth-child(3) img {
@@ -548,7 +538,6 @@ html {
     object-position: 80% 10%;
 }
 
-
 #modal {
     display: none;
     /* Hidden by default */
@@ -576,6 +565,10 @@ html {
     display: block;
     max-width: 90%;
     max-height: 85%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Add Animation */
@@ -636,10 +629,6 @@ html {
     flex-flow: row wrap;
     font-weight: bold;
     text-align: center;
-    /* background-image: url("/assets/images/florals/bottom.png"); */
-    /* background-size: contain; */
-    /* background-repeat: no-repeat; */
-    /* background-position: bottom; */
 }
 
 .wrapper::before {
@@ -664,6 +653,7 @@ html {
     position: relative;
 }
 
+/* Increase masonry grid */
 @media screen and (max-width: 599px) {
     #masonry {
 
@@ -683,6 +673,34 @@ html {
 @media only screen and (max-width: 700px) {
     .modal-content {
         width: 100%;
+    }
+}
+
+/* Faqs text on small screens*/
+@media only screen and (max-width: 340px) {
+    .faqs-container {
+        font-size: 1.2rem;
+    }
+}
+
+/* Faqs text on galaxy fold */
+@media only screen and (max-width: 280px) {
+    .faqs-container {
+        font-size: 1rem;
+    }
+}
+
+/* Remove body padding on small screens */
+@media only screen and (max-width: 425px) {
+    body {
+        padding: 0em;
+    }
+}
+
+/* Faqs on larger display */
+@media only screen and (min-width: 1900px) {
+    .faqs-container {
+        font-size: 2.5rem;
     }
 }
 
@@ -782,30 +800,39 @@ html {
     }
 }
 
-/* Lightbox */
-.previous,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -10vh;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+@media only screen and (min-width: 3840px) {
+    .story-content {
+        font-size: 5rem;
+    }
+    .faqs-container {
+        font-size: 3.9rem;
+    }
 }
 
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.previous:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+/* Screens greater than 2560px */
+@media only screen and (min-width: 2560px) {
+    .story-content {
+        font-size: 4rem;
+    }
+    .faqs-container {
+        font-size: 2.5rem;
+    }
+    .flex-column p {
+        font-size: 4rem;
+    }
+    .header {
+        font-size: 4.5rem;
+    }
+    .location {
+        font-size: 4rem;
+    }
+    .css-button-fully-rounded--red {
+        font-size: 4rem;
+        min-width: 500px;
+        height: 100px;
+        border-radius: 50px;
+    }
+    #sidenavIcon {
+        transform:scale(2);
+    }
 }
