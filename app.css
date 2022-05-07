@@ -384,6 +384,12 @@ html {
     opacity: 0.62;
 }
 
+/* Photography credit */
+#faq p {
+    text-align: right;
+    font-family: "brandon-regular-italic";
+}
+
 .zola {
     display: flex;
     align-items: center;
