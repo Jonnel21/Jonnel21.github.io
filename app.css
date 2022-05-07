@@ -388,6 +388,15 @@ html {
 #faq p {
     text-align: right;
     font-family: "brandon-regular-italic";
+    padding-right:1em;
+
+}
+
+/* keep photography credit on one line */
+@media only screen and (max-width: 364px) {
+    #faq p {
+        font-size:0.8em;
+    }
 }
 
 .zola {
@@ -776,7 +785,7 @@ html {
 
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 547px) {
     .story-content h1 {
         font-size: 1rem;
     }
