@@ -81,7 +81,7 @@ html {
 }
 
 #story {
-    background-image: url("/assets/images/florals/corner-flower.png"), url("/assets/images/florals/corner-flower-flip.png");
+    background-image: url("https://ik.imagekit.io/i1zomewktwg/flowers/corner-flower_AQBGWL9gR.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651648495027"), url("https://ik.imagekit.io/i1zomewktwg/flowers/corner-flower-flip_h-4yCkHYH0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651648499033");
     background-position: bottom left, top right;
     background-size: 35%, 35%;
     background-repeat:  no-repeat;
@@ -264,13 +264,6 @@ html {
     height: 75vh;
 }
 
-/* #story {
-    background-image: url("/assets/images/florals/column-flower.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
-
 .story-content {
     margin: auto;
     position:relative;
@@ -290,19 +283,6 @@ html {
 /* Ceremony & Reception styling */
 .flex>* {
     flex: 1 100%;
-}
-
-.flex {
-    width: 100%;
-    height: 75vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 0%;
-    background-image: url("./assets/images/florals/bottom.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 
 .flex-column img {
@@ -389,7 +369,7 @@ html {
     position: relative;
 }
 
-
+/* change opacity w/o affecting other elements */
 .faqs-container::before {
     content: "";
     background-image: url("https://ik.imagekit.io/i1zomewktwg/flowers/faq-flower_8Y6zOikQU?ik-sdk-version=javascript-1.4.3&updatedAt=1651648588820");
@@ -631,9 +611,10 @@ html {
     text-align: center;
 }
 
+/* change opacity w/o affecting other elements */
 .wrapper::before {
     content: "";
-    background-image: url("/assets/images/florals/bottom.png");
+    background-image: url("https://ik.imagekit.io/i1zomewktwg/flowers/bottom_GSaek_Ie8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651562495224");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
