@@ -52,6 +52,11 @@ html {
     list-style: none;
 }
 
+.credit {
+    font-family: "brandon-regular-italic";
+    text-align: right;
+}
+
 /* Lightbox */
 .previous,
 .next {
