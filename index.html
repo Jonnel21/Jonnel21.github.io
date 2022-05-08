@@ -66,7 +66,9 @@
                 After overcoming difficulties, we started our adventure.<br>
                 Fast forward to the present day, we are leveling up our love story.<br>
                 We cannot wait to share our happiness with everyone.<br>
-                #LetJOheartBeYORguiding<a class="key" onclick="play()">Key</a>
+                #LetJOheartBeYORguiding<a onclick="Play()">Key</a>
+                
+                  
             </p>
         </div>
     </div>
@@ -248,7 +250,7 @@
                 <ul>
                     <li>
                         Yes! Feel free to share our happiness w/ the world.
-                        Using our hashtags #LetJOheartBeYORguidingKey.
+                        Using our hashtags #LetJOheartBeYORguiding<a onclick="Play()">Key.</a>
                         <br>However, please be mindful of our photographers during the event.
                     </li>
                 </ul>
@@ -273,6 +275,20 @@
 </body>
 
 <script>
+    var kingdomhearts = true;
+    var audio = new Audio("./assets/images/Simple_And_Clean_.mp3");
+    function Play(){
+        if(kingdomhearts)
+        {
+            audio.play();
+            kingdomhearts = false;
+        }
+        else if(!kingdomhearts)
+        {
+            audio.pause();
+            kingdomhearts = true;
+        }
+    }
 
     // Parallax 
     const images = document.querySelectorAll("div.gallery-container > img");
